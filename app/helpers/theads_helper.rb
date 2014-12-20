@@ -1,0 +1,2 @@
+module TheadsHelper
+end

@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :orders
+
+  resources :tbodies
+
+  resources :tsigns
+
+  resources :theads
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
