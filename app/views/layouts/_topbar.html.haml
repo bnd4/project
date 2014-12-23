@@ -1,0 +1,9 @@
+.navbar.navbar-default
+  .container
+    .navbar-header
+      =link_to t('app.name'), root_path,class: 'navbar-brand'
+    %ul.nav.navbar-nav
+      %li{class: ('active' if controller_name=='theads')}=link_to "Шапки",theads_path
+      %li{class: ('active' if controller_name=='tbodies')}=link_to "Тела",tbodies_path
+      %li{class: ('active' if controller_name=='tsigns')}=link_to "Подписи",tsigns_path
+      %li{class: ('active' if controller_name=='orders')}=link_to "Приказы",orders_path
