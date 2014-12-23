@@ -1,0 +1,18 @@
+ru:
+  app:
+    thead: Шапка
+    tbody: Тело
+    tsigh: Подписи
+  activerecord:
+    models:
+    attributes:
+      thead:
+
+      tbody:
+      tsign:
+  helpers:
+    sure: Вы уверены?
+    submit:
+      create: Сохранить
+      submit: Сохранить
+      update: Сохранить

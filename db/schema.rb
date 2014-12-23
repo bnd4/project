@@ -14,6 +14,10 @@
 ActiveRecord::Schema.define(version: 20141220150423) do
 
   create_table "orders", force: true do |t|
+    t.integer  "thead_id"
+    t.integer  "tbody_id"
+    t.integer  "tsign_id"
+    t.text     "template"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -26,14 +30,12 @@ ActiveRecord::Schema.define(version: 20141220150423) do
 
   create_table "theads", force: true do |t|
     t.text     "head"
-    t.integer  "order_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "tsigns", force: true do |t|
     t.text     "signature"
-    t.integer  "order_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

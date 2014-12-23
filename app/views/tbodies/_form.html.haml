@@ -1,0 +1,21 @@
+<%= form_for(@tbody) do |f| %>
+  <% if @tbody.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tbody.errors.count, "error") %> prohibited this tbody from being saved:</h2>
+
+      <ul>
+      <% @tbody.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :main %><br>
+    <%= f.text_area :main %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

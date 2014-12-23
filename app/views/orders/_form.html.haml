@@ -1,0 +1,17 @@
+= form_for @order do |f|
+  =error_messages_for @order
+
+  .form-group
+    = f.label :thead_id
+    = f.text_field :thead_id,class: 'form-control'
+  .form-group
+    = f.label :tbody_id
+    = f.text_field :tbody_id,class: 'form-control'
+  .form-group
+    = f.label :tsign_id
+    = f.text_field :tsign_id,class: 'form-control'
+  .form-group
+    = f.label :template
+    = f.text_field :template,class: 'form-control'
+  .form-actions
+    = f.submit nil, class: 'btn btn-primary'

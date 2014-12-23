@@ -1,0 +1,15 @@
+%h2
+  Приказы
+
+  .list-group
+  -if @orders.nil?
+    .alert.alert-info Приказов не найдено
+  -else
+    -@orders.each do |order|
+      =render 'orders/order', order: order
+
+= link_to 'Edit', edit_order_path(@order)
+= link_to 'Back', orders_path
+= link_to @order, class: 'btn btn-danger', method: :delete do
+  =fa_icon 'trash-o'
+  Удалить

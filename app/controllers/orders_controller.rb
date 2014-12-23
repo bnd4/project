@@ -54,10 +54,10 @@ class OrdersController < ApplicationController
   # DELETE /orders/1
   # DELETE /orders/1.json
   def destroy
-    @order.destroy
-    respond_to do |format|
-      format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
-      format.json { head :no_content }
+    if @order.destroy
+      redirect_to orders_url, notice: 'Награда удалена.'
+    else
+      redirect_to @order, danger: "Невозможно удалить приказ."
     end
   end
 
@@ -69,6 +69,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params[:order]
+      params.require(:order).permit(:thead_id, :tbody_id, :tsign_id)
     end
 end
