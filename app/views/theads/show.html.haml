@@ -1,9 +1,12 @@
-<p id="notice"><%= notice %></p>
+%h2
+  Шапки
 
-<p>
-  <strong>Head:</strong>
-  <%= @thead.head %>
-</p>
+%p.n1
+  %b Содержание шапки:
+  = @thead.head
 
-<%= link_to 'Edit', edit_thead_path(@thead) %> |
-<%= link_to 'Back', theads_path %>
+= link_to 'Edit', edit_thead_path(@thead), class: 'btn btn-primary'
+= link_to 'Back', theads_path, class: 'btn btn-primary'
+= link_to @thead, class: 'btn btn-danger', method: :delete do
+  =fa_icon 'trash-o'
+  Удалить

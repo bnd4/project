@@ -1,9 +1,12 @@
-<p id="notice"><%= notice %></p>
+%h2
+  Тела
 
-<p>
-  <strong>Main:</strong>
-  <%= @tbody.main %>
-</p>
+%p.n1
+  %b Содержание тела:
+  = @tbody.main
 
-<%= link_to 'Edit', edit_tbody_path(@tbody) %> |
-<%= link_to 'Back', tbodies_path %>
+= link_to 'Edit', edit_tbody_path(@tbody), class: 'btn btn-primary'
+= link_to 'Back', tbodies_path, class: 'btn btn-primary'
+= link_to @tbody, class: 'btn btn-danger', method: :delete do
+  =fa_icon 'trash-o'
+  Удалить

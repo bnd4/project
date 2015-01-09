@@ -7,7 +7,7 @@ ru:
     models:
     attributes:
       thead:
-
+      order:
       tbody:
       tsign:
   helpers:

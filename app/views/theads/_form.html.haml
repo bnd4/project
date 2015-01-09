@@ -1,21 +1,9 @@
-<%= form_for(@thead) do |f| %>
-  <% if @thead.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@thead.errors.count, "error") %> prohibited this thead from being saved:</h2>
+= form_for @thead do |f|
+  =error_messages_for @thead
 
-      <ul>
-      <% @thead.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  .form-group
+    = f.label :head
+    = f.text_field :head,class: 'form-control'
 
-  <div class="field">
-    <%= f.label :head %><br>
-    <%= f.text_area :head %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+  .form-actions
+    = f.submit nil, class: 'btn btn-primary'

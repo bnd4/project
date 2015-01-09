@@ -1,9 +1,12 @@
-<p id="notice"><%= notice %></p>
+%h2
+  Подписи
 
-<p>
-  <strong>Signature:</strong>
-  <%= @tsign.signature %>
-</p>
+%p.n1
+  %b Набор подписей:
+  = @tsign.signature
 
-<%= link_to 'Edit', edit_tsign_path(@tsign) %> |
-<%= link_to 'Back', tsigns_path %>
+= link_to 'Edit', edit_tsign_path(@tsign), class: 'btn btn-primary'
+= link_to 'Back', tsigns_path, class: 'btn btn-primary'
+= link_to @tsigns, class: 'btn btn-danger', method: :delete do
+  =fa_icon 'trash-o'
+  Удалить

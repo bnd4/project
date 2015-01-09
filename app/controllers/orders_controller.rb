@@ -25,7 +25,7 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     @order = Order.new(order_params)
-
+    setTbodies
     respond_to do |format|
       if @order.save
         format.html { redirect_to @order, notice: 'Order was successfully created.' }
@@ -42,6 +42,7 @@ class OrdersController < ApplicationController
   def update
     respond_to do |format|
       if @order.update(order_params)
+        setTbodies
         format.html { redirect_to @order, notice: 'Order was successfully updated.' }
         format.json { render :show, status: :ok, location: @order }
       else
@@ -69,6 +70,10 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:thead_id, :tbody_id, :tsign_id)
+      params.require(:order).permit(:thead_id,:tsign_id, :template )
+    end
+    def setTbodies
+      tbodies = Tbody.where :id => params[:order][:tbodies]
+      @order.tbodies = tbodies
     end
 end

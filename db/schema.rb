@@ -11,15 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141220150423) do
+ActiveRecord::Schema.define(version: 20150109000755) do
 
   create_table "orders", force: true do |t|
     t.integer  "thead_id"
-    t.integer  "tbody_id"
     t.integer  "tsign_id"
     t.text     "template"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "orders_tbodies", id: false, force: true do |t|
+    t.integer "order_id", null: false
+    t.integer "tbody_id", null: false
   end
 
   create_table "tbodies", force: true do |t|
