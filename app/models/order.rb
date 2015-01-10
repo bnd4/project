@@ -3,7 +3,7 @@ class Order < ActiveRecord::Base
   belongs_to :tsign
   has_and_belongs_to_many :tbodies
 
-  before_save :generate
+  before_create :generate
 
   def generate
     self.template=self.thead.head

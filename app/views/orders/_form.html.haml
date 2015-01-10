@@ -2,12 +2,14 @@
   =error_messages_for @order
 
   .form-group
+    = f.label :name
+    = f.text_field :name, class: 'form-control'
+  .form-group
     = f.label :thead_id
     = f.select :thead_id, [['', 0]] +  Thead.all.map{|c| [c.head,c.id]}, {},class: 'form-control'
   .form-group
     = f.label :tbodies
     = f.select :tbodies, Tbody.all.map{|c| [c.main,c.id]}, {}, {class: 'form-control', :size => 3, :multiple => "multiple"}
-
   .form-group
     = f.label :tsign_id
     = f.select :tsign_id, [['', 0]] +  Tsign.all.map{|c| [c.signature,c.id]}, {},class: 'form-control'

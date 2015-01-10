@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20150109000755) do
   create_table "orders", force: true do |t|
     t.integer  "thead_id"
     t.integer  "tsign_id"
+    t.text     "name"
     t.text     "template"
     t.datetime "created_at"
     t.datetime "updated_at"

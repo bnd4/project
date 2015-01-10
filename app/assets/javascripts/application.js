@@ -14,4 +14,16 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
+//= require ace/ace
+//= require ace/mode-ruby
+//= require ace/mode-latex
+//= require ace/theme-xcode
+//= require jquery-ace.min
 //= require_tree .
+
+
+function initAce(){
+    $('.js-ace').ace({ theme: 'xcode', lang: 'latex', lang: 'ruby' });
+}
+$(document).ready(initAce);
+$(document).on('page:load', initAce)

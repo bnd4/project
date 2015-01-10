@@ -16,4 +16,8 @@ module ApplicationHelper
     link_to(fa_icon("angle-left")+' Назад',:back, class: 'btn btn-default')
   end
 
+  def lesc(text)
+    LatexToPdf.escape_latex(text)
+  end
+
 end
