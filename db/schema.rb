@@ -29,12 +29,14 @@ ActiveRecord::Schema.define(version: 20150109000755) do
 
   create_table "tbodies", force: true do |t|
     t.text     "main"
+    t.text     "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "theads", force: true do |t|
     t.text     "head"
+    t.text     "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

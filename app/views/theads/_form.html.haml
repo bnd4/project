@@ -2,6 +2,9 @@
   =error_messages_for @thead
 
   .form-group
+    = f.label "Краткое содержание"
+    = f.text_field :name, class: 'form-control'
+  .form-group
     = f.label 'Текст шаблона'
     = f.text_area :head, class: 'form-control js-ace', rows: 10
 

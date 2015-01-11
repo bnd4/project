@@ -69,6 +69,6 @@ class TheadsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def thead_params
-      params.require(:thead).permit(:head)
+      params.require(:thead).permit(:head, :name)
     end
 end

@@ -69,6 +69,6 @@ class TbodiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tbody_params
-      params.require(:tbody).permit(:main)
+      params.require(:tbody).permit(:main, :name)
     end
 end
