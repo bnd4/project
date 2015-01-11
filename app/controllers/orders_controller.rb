@@ -28,7 +28,7 @@ class OrdersController < ApplicationController
     setTbodies
     respond_to do |format|
       if @order.save
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
+        format.html { redirect_to @order, notice: 'Приказ успешно создан.' }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class OrdersController < ApplicationController
     respond_to do |format|
       if @order.update(order_params)
         setTbodies
-        format.html { redirect_to @order, notice: 'Order was successfully updated.' }
+        format.html { redirect_to @order, notice: 'Приказ успешно отредактирован.' }
         format.json { render :show, status: :ok, location: @order }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class OrdersController < ApplicationController
   # DELETE /orders/1.json
   def destroy
     if @order.destroy
-      redirect_to orders_url, notice: 'Награда удалена.'
+      redirect_to orders_url, notice: 'Приказ удален.'
     else
       redirect_to @order, danger: "Невозможно удалить приказ."
     end

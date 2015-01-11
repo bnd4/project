@@ -34,7 +34,7 @@ gem 'kaminari'#, github: 'amatsuda/kaminari'
 gem 'httparty'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'cocaine', '~> 0.5.4'
-gem 'prawn'
+
 gem 'jquery-ace-rails'
 
 # Use ActiveModel has_secure_password

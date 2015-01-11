@@ -2,8 +2,8 @@
   =error_messages_for @tbody
 
   .form-group
-    = f.label :main
-    = f.text_field :main,class: 'form-control'
+    = f.label 'Текст шаблона'
+    = f.text_area :main, class: 'form-control js-ace', rows: 10
 
   .form-actions
-    = f.submit nil, class: 'btn btn-primary'
+    = f.submit 'Сохранить', class: 'btn btn-primary'

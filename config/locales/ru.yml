@@ -3,13 +3,15 @@ ru:
     thead: Шапка
     tbody: Тело
     tsigh: Подписи
+
   activerecord:
     models:
     attributes:
       thead:
-      order:
       tbody:
       tsign:
+      order:
+
   helpers:
     sure: Вы уверены?
     submit:

@@ -2,17 +2,17 @@
   =error_messages_for @order
 
   .form-group
-    = f.label :name
+    = f.label "Краткое содержание"
     = f.text_field :name, class: 'form-control'
   .form-group
-    = f.label :thead_id
+    = f.label 'Шаблон шапки'
     = f.select :thead_id, [['', 0]] +  Thead.all.map{|c| [c.head,c.id]}, {},class: 'form-control'
   .form-group
-    = f.label :tbodies
+    = f.label 'Шаблоны тел'
     = f.select :tbodies, Tbody.all.map{|c| [c.main,c.id]}, {}, {class: 'form-control', :size => 3, :multiple => "multiple"}
   .form-group
-    = f.label :tsign_id
+    = f.label 'Шаблоны подписей'
     = f.select :tsign_id, [['', 0]] +  Tsign.all.map{|c| [c.signature,c.id]}, {},class: 'form-control'
     = f.hidden_field :template
   .form-actions
-    = f.submit nil, class: 'btn btn-primary'
+    = f.submit 'Сохранить', class: 'btn btn-primary'

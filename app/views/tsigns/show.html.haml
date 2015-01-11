@@ -1,12 +1,12 @@
 %h2
-  Подписи
+  Шаблон подписей приказа
 
 %p.n1
   %b Набор подписей:
   = @tsign.signature
 
-= link_to 'Edit', edit_tsign_path(@tsign), class: 'btn btn-primary'
-= link_to 'Back', tsigns_path, class: 'btn btn-primary'
+= link_to 'Редактировать', edit_tsign_path(@tsign), class: 'btn btn-primary fa fa-pencil-square-o'
+= link_to 'Назад', tsigns_path, class: 'btn btn-primary fa fa-chevron-left'
 = link_to @tsigns, class: 'btn btn-danger', method: :delete do
   =fa_icon 'trash-o'
   Удалить

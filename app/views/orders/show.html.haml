@@ -1,11 +1,11 @@
 %h2
-  Приказы
+  Приказ
 
 %p.n1
   = @order.template
 
-= link_to 'Edit', edit_order_path(@order), class: 'btn btn-primary'
-= link_to 'Back', orders_path, class: 'btn btn-primary'
+= link_to 'Редактировать', edit_order_path(@order), class: 'btn btn-primary fa fa-pencil-square-o'
+= link_to 'Назад', orders_path, class: 'btn btn-primary fa fa-chevron-left'
 = link_to @order, class: 'btn btn-danger', method: :delete do
   =fa_icon 'trash-o'
   Удалить

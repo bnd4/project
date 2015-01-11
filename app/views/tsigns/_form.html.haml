@@ -2,8 +2,8 @@
   =error_messages_for @tsign
 
   .form-group
-    = f.label :signature
-    = f.text_field :signature,class: 'form-control'
+    = f.label 'Подписи'
+    = f.text_area :signature, class: 'form-control js-ace', rows: 10
 
   .form-actions
-    = f.submit nil, class: 'btn btn-primary'
+    = f.submit 'Сохранить', class: 'btn btn-primary'
