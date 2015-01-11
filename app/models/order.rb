@@ -3,6 +3,10 @@ class Order < ActiveRecord::Base
   belongs_to :tsign
   has_and_belongs_to_many :tbodies
 
+  validates :name, presence: true
+  validates :thead, presence: true
+  validates :tsign, presence: true
+
   before_create :generate
 
   def generate
